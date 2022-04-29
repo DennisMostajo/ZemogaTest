@@ -17,6 +17,9 @@
 		BE92F19D281C416600A784EC /* ZemogaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F19C281C416600A784EC /* ZemogaTestTests.swift */; };
 		BE92F1A7281C416600A784EC /* ZemogaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1A6281C416600A784EC /* ZemogaTestUITests.swift */; };
 		BE92F1A9281C416600A784EC /* ZemogaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1A8281C416600A784EC /* ZemogaTestUITestsLaunchTests.swift */; };
+		BE92F1C4281C760800A784EC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1C3281C760800A784EC /* Post.swift */; };
+		BE92F1C6281C761A00A784EC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1C5281C761A00A784EC /* Comment.swift */; };
+		BE92F1C8281C762500A784EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1C7281C762500A784EC /* User.swift */; };
 		C9177116AE325A0998C82DF9 /* Pods_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		BE92F1A2281C416600A784EC /* ZemogaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZemogaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE92F1A6281C416600A784EC /* ZemogaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaTestUITests.swift; sourceTree = "<group>"; };
 		BE92F1A8281C416600A784EC /* ZemogaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE92F1C3281C760800A784EC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BE92F1C5281C761A00A784EC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		BE92F1C7281C762500A784EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1005643AECDAC520A97BC2B /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,6 +183,9 @@
 		BE92F1B8281C437E00A784EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE92F1C3281C760800A784EC /* Post.swift */,
+				BE92F1C5281C761A00A784EC /* Comment.swift */,
+				BE92F1C7281C762500A784EC /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,7 +282,6 @@
 				219990BF426AD37E7C97BE32 /* Pods-ZemogaTestUITests.debug.xcconfig */,
 				0AA6C4E4FBFC9F75054B1F71 /* Pods-ZemogaTestUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -534,8 +542,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE92F1C4281C760800A784EC /* Post.swift in Sources */,
 				BE92F186281C416200A784EC /* AppDelegate.swift in Sources */,
 				BE92F188281C416200A784EC /* SceneDelegate.swift in Sources */,
+				BE92F1C8281C762500A784EC /* User.swift in Sources */,
+				BE92F1C6281C761A00A784EC /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
