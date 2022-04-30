@@ -22,6 +22,7 @@
 		BE92F1C8281C762500A784EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1C7281C762500A784EC /* User.swift */; };
 		BE92F1CA281C93A500A784EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1C9281C93A500A784EC /* NetworkManager.swift */; };
 		BE92F1CC281C93C700A784EC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1CB281C93C700A784EC /* API.swift */; };
+		BE92F1CE281CD36600A784EC /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1CD281CD36600A784EC /* RealmHelper.swift */; };
 		C9177116AE325A0998C82DF9 /* Pods_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		BE92F1C7281C762500A784EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE92F1C9281C93A500A784EC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BE92F1CB281C93C700A784EC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BE92F1CD281CD36600A784EC /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1005643AECDAC520A97BC2B /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 		BE92F1B6281C437E00A784EC /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				BE92F1CD281CD36600A784EC /* RealmHelper.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				BE92F186281C416200A784EC /* AppDelegate.swift in Sources */,
 				BE92F188281C416200A784EC /* SceneDelegate.swift in Sources */,
 				BE92F1C8281C762500A784EC /* User.swift in Sources */,
+				BE92F1CE281CD36600A784EC /* RealmHelper.swift in Sources */,
 				BE92F1C6281C761A00A784EC /* Comment.swift in Sources */,
 				BE92F1CC281C93C700A784EC /* API.swift in Sources */,
 			);
