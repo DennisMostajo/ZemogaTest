@@ -12,13 +12,13 @@ class User: Object, Codable {
             /// id:     The `primaryKey` value.
     @objc dynamic var id: Int = 0
             /// name:     The `name` from `User`.
-    @objc dynamic var name: String? = ""
+    @objc dynamic var name: String = ""
             /// username:     The `username` from `User`.
-    @objc dynamic var username: String? = ""
+    @objc dynamic var username: String = ""
             /// email:     The `email` from `User`.
-    @objc dynamic var email: String? = ""
+    @objc dynamic var email: String = ""
             /// phone:     The `phone`  provided by `User`.
-    @objc dynamic var phone: String? = ""
+    @objc dynamic var phone: String = ""
             /// website:     The `website` provided by `User`.
     @objc dynamic var website: String? = ""
     

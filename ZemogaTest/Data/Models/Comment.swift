@@ -14,11 +14,11 @@ class Comment: Object, Codable {
         /// postId:     The `Key` value from `Post`.
     @objc dynamic var postId: Int = 0
         /// body:     The `content` as a description from the `Comment`.
-    @objc dynamic var body: String? = ""
+    @objc dynamic var body: String = ""
         /// name:     The `name` from `User` that commented the `Post`.
-    @objc dynamic var name: String? = ""
+    @objc dynamic var name: String = ""
         /// email:     The `email` from `User` that commented the `Post`.
-    @objc dynamic var email: String? = ""
+    @objc dynamic var email: String = ""
     
     override static func primaryKey() -> String {
         return "id"

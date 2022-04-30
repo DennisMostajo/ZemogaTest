@@ -14,9 +14,9 @@ class Post: Object, Codable {
         /// userId:     The `Key` value from `User`.
     @objc dynamic var userId: Int = 0
         /// title:     The `title` as a main reference from the `Post`
-    @objc dynamic var title: String? = ""
+    @objc dynamic var title: String = ""
         /// body:     The `content` as a description from the `Post`
-    @objc dynamic var body: String? = ""
+    @objc dynamic var body: String = ""
         /// isFavorite:     The `boolean` value to check if  `User` has a preference about the `Post`
     @objc dynamic var isFavorite: Bool = false
     

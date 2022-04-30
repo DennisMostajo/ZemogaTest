@@ -155,6 +155,24 @@ class RealmHelper {
         }
     }
     
+    /// Method to check if the `Post` object is new or already exists by `postId`.
+    ///
+    /// - Parameters:
+    ///   - postId: The `id` as primary key from `Post` object.
+    /// - Returns: A bool value.
+    class func isNewPost(postId:Int) -> Bool {
+        var exist = false
+        let realm = try! Realm()
+        let post = realm.object(ofType: Post.self, forPrimaryKey: postId)
+        if post?.id == postId {
+            exist = true
+        }
+        else {
+            exist = false
+        }
+        return exist
+    }
+    
     //MARK: Delete Methods
     
     /// Method to delete all `Post` objects from the `database`.
@@ -224,5 +242,22 @@ class RealmHelper {
         Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: DB_VERSION, migrationBlock: migrationBlock)
         _ = try! Realm()
         debugPrint("--->Path to realm file:\(String(describing: Realm.Configuration.defaultConfiguration.fileURL?.absoluteString))")
+    }
+}
+
+/// `Results` is an auto-updating container type in Realm returned from object queries.
+extension Results {
+    /// Method to convert the `Results` in an `Array`
+    /// - Parameters:
+    ///   - T.Type: as realm model object.
+    /// - Returns: an array of required realm objects.
+    func toArray<T>(ofType: T.Type) -> [T] {
+        var array = [T]()
+        for i in 0 ..< count {
+            if let result = self[i] as? T {
+                array.append(result)
+            }
+        }
+        return array
     }
 }
