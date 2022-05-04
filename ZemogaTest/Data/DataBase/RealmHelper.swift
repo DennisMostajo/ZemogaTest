@@ -227,12 +227,13 @@ class RealmHelper {
     class func deleteUserByPostId(_ id: Int) {
         do {
             let realm = try Realm()
-            let user = realm.object(ofType: User.self, forPrimaryKey: id)
-            realm.refresh()
-            try realm.write {
-                realm.delete(user!)
+            if let user = realm.object(ofType: User.self, forPrimaryKey: id) {
+                realm.refresh()
+                try realm.write {
+                    realm.delete(user)
+                }
+                debugPrint("user deleted")
             }
-            debugPrint("user deleted")
         }
         catch {
             debugPrint("can't deleted user")
