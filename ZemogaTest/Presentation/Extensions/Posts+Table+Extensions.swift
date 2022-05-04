@@ -54,14 +54,14 @@ extension PostsViewController:UITableViewDelegate, UITableViewDataSource {
     /// `Data Source` method for  edition behavior on `UITableView`.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            let alert = UIAlertController(title: NSLocalizedString("ALERT_TITLE", comment: "alert"), message: NSLocalizedString("ALERT_MESSAGE", comment: "alert message"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("DELETE", comment: "delete"), style: .destructive, handler: { action in
                 self.viewModel.postViewModels[indexPath.row].delete()
                 self.viewModel.postViewModels.remove(at: indexPath.row)
                 self.table.deleteRows(at: [indexPath], with: .automatic)
                 self.table.endUpdates()
             }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: .cancel, handler: { action in
             }))
             self.present(alert, animated: true, completion: nil)
         }
