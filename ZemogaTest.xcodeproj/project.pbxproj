@@ -25,6 +25,7 @@
 		BE92F1CE281CD36600A784EC /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1CD281CD36600A784EC /* RealmHelper.swift */; };
 		BE92F1D4281CFB2100A784EC /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1D3281CFB2100A784EC /* PostViewModel.swift */; };
 		BE92F1D6281CFB3300A784EC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92F1D5281CFB3300A784EC /* PostCell.swift */; };
+		BE9675FE2821FD04006D435A /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9675FD2821FD04006D435A /* PostsViewModel.swift */; };
 		C9177116AE325A0998C82DF9 /* Pods_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		BE92F1CD281CD36600A784EC /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		BE92F1D3281CFB2100A784EC /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		BE92F1D5281CFB3300A784EC /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		BE9675FD2821FD04006D435A /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1005643AECDAC520A97BC2B /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				BE92F1D3281CFB2100A784EC /* PostViewModel.swift */,
+				BE9675FD2821FD04006D435A /* PostsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				BE92F1C8281C762500A784EC /* User.swift in Sources */,
 				BE92F1CE281CD36600A784EC /* RealmHelper.swift in Sources */,
 				BE92F1D4281CFB2100A784EC /* PostViewModel.swift in Sources */,
+				BE9675FE2821FD04006D435A /* PostsViewModel.swift in Sources */,
 				BE92F1C6281C761A00A784EC /* Comment.swift in Sources */,
 				BE92F1CC281C93C700A784EC /* API.swift in Sources */,
 				BE92F1D6281CFB3300A784EC /* PostCell.swift in Sources */,

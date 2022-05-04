@@ -37,10 +37,10 @@ enum API: URLRequestConvertible {
         switch self {
             case .getPosts:
                 return "posts"
-            case .getCommentsFromPostWithId(let postId):
-                return "comments?postId=\(postId)"
+            case .getCommentsFromPostWithId:
+                return "comments"
             case .getUserWithId(let userId):
-                return "users?id=\(userId)"
+                return "users/\(userId)"
         }
     }
     
@@ -51,6 +51,17 @@ enum API: URLRequestConvertible {
         var request = URLRequest(url:URL.appendingPathComponent(path))
         debugPrint("URL request:\(URL.appendingPathComponent(path))")
         request.httpMethod = method.rawValue
+        var parameters:[String: AnyObject] = [:]
+        switch self {
+            case .getPosts:
+                break
+            case .getCommentsFromPostWithId(let postId):
+                parameters["postId"] = postId as AnyObject
+            case .getUserWithId:
+                break
+        }
+        debugPrint(parameters)
+        request = try! URLEncoding().encode(request, with: parameters)
         dump(request)
         return request
     }

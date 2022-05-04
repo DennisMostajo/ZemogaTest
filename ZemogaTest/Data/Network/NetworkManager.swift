@@ -28,7 +28,7 @@ class NetworkManager {
         success: NetworkSuccessHandler?,
         failure: NetworkFailureHandler?) -> Request? {
         
-        let request = AF.request(API.getPosts).response {
+        let request = AF.request(url).response {
             response in
             if let error = response.error {
                 failure?(response.response, response.data as AnyObject?, error)

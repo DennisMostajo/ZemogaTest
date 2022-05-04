@@ -103,9 +103,23 @@ class RealmHelper {
     class func getPosts() -> Results<Post>? {
         do {
             let realm = try Realm()
-            return realm.objects(Post.self)
+            let sortProperties = [SortDescriptor(keyPath: "isFavorite", ascending: false), SortDescriptor(keyPath: "id", ascending: true)]
+            return realm.objects(Post.self).sorted(by:sortProperties)
         } catch {
             debugPrint("Error getting posts from database")
+            return nil
+        }
+    }
+    
+    /// Method to get the all  favorites `Post` objects.
+    ///
+    /// - Returns: A list as `Results<Post>`  with all required items.
+    class func getFavorites() -> Results<Post>? {
+        do {
+            let realm = try Realm()
+            return realm.objects(Post.self).filter("isFavorite == true").sorted(byKeyPath: "id", ascending: true)
+        } catch {
+            debugPrint("Error getting comments from database")
             return nil
         }
     }
@@ -145,32 +159,14 @@ class RealmHelper {
     /// - Parameters:
     ///   - postId: The `id` as primary key from `Post` object.
     /// - Returns: A list as `Results<Comment>`  with all required items.
-    class func getCommentByPostId(postId:Int) -> Results<Comment>? {
+    class func getCommentsByPostId(postId:Int) -> Results<Comment>? {
         do {
             let realm = try Realm()
-            return realm.objects(Comment.self).filter("postId == %i", postId)
+            return realm.objects(Comment.self).filter("postId == %i", postId).sorted(byKeyPath: "id", ascending: true)
         } catch {
             debugPrint("Error getting comments from database")
             return nil
         }
-    }
-    
-    /// Method to check if the `Post` object is new or already exists by `postId`.
-    ///
-    /// - Parameters:
-    ///   - postId: The `id` as primary key from `Post` object.
-    /// - Returns: A bool value.
-    class func isNewPost(postId:Int) -> Bool {
-        var exist = false
-        let realm = try! Realm()
-        let post = realm.object(ofType: Post.self, forPrimaryKey: postId)
-        if post?.id == postId {
-            exist = true
-        }
-        else {
-            exist = false
-        }
-        return exist
     }
     
     //MARK: Delete Methods
@@ -204,6 +200,42 @@ class RealmHelper {
             catch {
                 debugPrint("can't deleted post")
             }
+        }
+    }
+    
+    /// Method to delete the `Comment` objects by `postId`.
+    /// - Parameters:
+    ///   - postId: The `id` as primary key from `Post` object.
+    class func deleteCommentsByPostId(_ postId: Int) {
+        do {
+            let realm = try Realm()
+            let comments = realm.objects(Comment.self).filter("postId = %i",postId)
+            realm.refresh()
+            try realm.write {
+                realm.delete(comments)
+            }
+            debugPrint("comments deleted")
+        }
+        catch {
+            debugPrint("can't deleted comments")
+        }
+    }
+    
+    /// Method to delete the `User` object by `postId`.
+    /// - Parameters:
+    ///   - id: The `id` as primary key from `Post` object.
+    class func deleteUserByPostId(_ id: Int) {
+        do {
+            let realm = try Realm()
+            let user = realm.object(ofType: User.self, forPrimaryKey: id)
+            realm.refresh()
+            try realm.write {
+                realm.delete(user!)
+            }
+            debugPrint("user deleted")
+        }
+        catch {
+            debugPrint("can't deleted user")
         }
     }
     

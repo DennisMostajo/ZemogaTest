@@ -29,8 +29,15 @@ class PostViewModel {
         self.isFavorite = post.isFavorite
     }
     
-    /// Method to delete the item.
+    /// Method to update `isFavorite` value.
+    func updateIsFavorite(value:Bool) {
+        RealmHelper.updateIsFavoritePost(postId: self.id, value: value)
+    }
+    
+    /// Method to delete the `Post` object and all relations.
     func delete() {
         RealmHelper.deletePostById(self.id)
+        RealmHelper.deleteCommentsByPostId(self.id)
+        RealmHelper.deleteUserByPostId(self.userId)
     }
 }

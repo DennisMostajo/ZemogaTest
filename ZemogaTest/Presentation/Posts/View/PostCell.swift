@@ -21,13 +21,13 @@ class PostCell: UITableViewCell {
     /// - Parameters:
     ///   - viewModel: The `PostViewModel`.
     func fill(viewModel: PostViewModel) {
-        if RealmHelper.isNewPost(postId: viewModel.id) {
-            self.iconImage.image = UIImage(named: "syncSuccess")
-        }
-        else if viewModel.isFavorite {
+        if viewModel.isFavorite {
             self.iconImage.image = UIImage(named: "favorite")
         }
+        else {
+            self.iconImage.image = nil
+        }
         self.titleLabel.text = viewModel.title
-        self.accessoryImage.image = UIImage(named: "favorite")
+        self.accessoryImage.image = UIImage(named: "Arrow")
     }
 }
