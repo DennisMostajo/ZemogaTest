@@ -26,6 +26,7 @@ class PostViewModel {
         self.id = post.id
         self.userId = post.userId
         self.title = post.title
+        self.body = post.body
         self.isFavorite = post.isFavorite
     }
     

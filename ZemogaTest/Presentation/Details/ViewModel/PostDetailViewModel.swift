@@ -35,11 +35,11 @@ class PostDetailViewModel {
     
     /// Method to load  all detail data from `JSONPlaceholder API`.
     func loadFromNetwork(post:Post, completion:@escaping () -> Void) {
-        _ = NetworkManager.request(API.getUserWithId(userId: post.userId), success: {responseRequest,responseData in
+        _ = NetworkManager.shared.request(API.getUserWithId(userId: post.userId), success: {responseRequest,responseData in
             if let user = try? JSONDecoder().decode(User.self, from: responseData as! Data) {
                 RealmHelper.createOrUpdateUser(user)
             }
-            _ = NetworkManager.request(API.getCommentsFromPostWithId(postId: post.id), success: {responseRequest,responseData in
+            _ = NetworkManager.shared.request(API.getCommentsFromPostWithId(postId: post.id), success: {responseRequest,responseData in
                 if let comments = try? JSONDecoder().decode([Comment].self, from: responseData as! Data) {
                     for comment in comments {
                         RealmHelper.createOrUpdateComment(comment)

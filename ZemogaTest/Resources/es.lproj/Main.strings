@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Written by:"; ObjectID = "9MI-db-9tk"; */
+"9MI-db-9tk.text" = "Escrito por:";
+
+/* Class = "UISegmentedControl"; s7n-tc-lVt.segmentTitles[0] = "All"; ObjectID = "s7n-tc-lVt"; */
+"s7n-tc-lVt.segmentTitles[0]" = "Todos";
+
+/* Class = "UISegmentedControl"; s7n-tc-lVt.segmentTitles[1] = "Favorites"; ObjectID = "s7n-tc-lVt"; */
+"s7n-tc-lVt.segmentTitles[1]" = "Favoritos";
+
+/* Class = "UIButton"; configuration.title = "   Delete All"; ObjectID = "sST-h1-o9g"; */
+"sST-h1-o9g.configuration.title" = "   Eliminar todos";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sST-h1-o9g"; */
+"sST-h1-o9g.normalTitle" = "Eliminar todos";

@@ -8,7 +8,7 @@
 import UIKit
 
 /// Custom `Extension` from `PostsViewController` to manage the `UITableView` behavior.
-extension PostsViewController {
+extension PostsViewController:UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - UITableView
     

@@ -11,6 +11,9 @@ import Alamofire
 ///
 /// Implemented to handle the custom `Request` and callbacks
 class NetworkManager {
+    
+    /// A shared instance as singleton
+    static let shared = NetworkManager()
     /// Closure to be executed when handling request success
     public typealias NetworkSuccessHandler = (HTTPURLResponse?, AnyObject?) -> Void
     /// Closure to be executed when handling request failure

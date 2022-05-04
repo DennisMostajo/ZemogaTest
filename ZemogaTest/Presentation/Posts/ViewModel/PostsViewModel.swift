@@ -44,7 +44,7 @@ class PostsViewModel {
     
     /// Method to load  `Posts` from `JSONPlaceholder API`.
     func loadFromNetwork(completion:@escaping () -> Void) {
-        _ = NetworkManager.request(API.getPosts, success: {responseRequest,responseData in
+        _ = NetworkManager.shared.request(API.getPosts, success: {responseRequest,responseData in
             if let posts = try? JSONDecoder().decode([Post].self, from: responseData as! Data) {
                 for post in posts {
                     RealmHelper.createOrUpdatePost(post)

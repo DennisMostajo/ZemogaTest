@@ -10,7 +10,7 @@ import Toast_Swift
 
 /// The `PostDetailViewController` class manages and defines all the behavior
 /// of all the view hierarchies that represent the detail of the `Post`.
-class PostDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
+class PostDetailViewController: UIViewController, UINavigationControllerDelegate {
     
     /// The custom `UIButton` that back in the navigation.
     private let backButton = UIButton(type:.custom)
@@ -70,7 +70,7 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         self.favoriteButton.addTarget(self, action: #selector(isFavoriteAction), for: .touchUpInside)
         self.deleteButton.addTarget(self, action: #selector(deleteAction), for: .touchUpInside)
         self.setupNavigation(
-            title: "Detail",
+            title: NSLocalizedString("DETAIL_TITLE", comment: "Detail"),
             leftButton: self.backButton,
             rightButton: self.favoriteButton,
             secondRightButton: self.deleteButton,
@@ -150,14 +150,14 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     /// Method to delete the `Post`.
     @objc func deleteAction() {
-        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+        let alert = UIAlertController(title: NSLocalizedString("ALERT_TITLE", comment: "alert"), message: NSLocalizedString("ALERT_MESSAGE", comment: "alert message"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("DELETE", comment: "delete"), style: .destructive, handler: { action in
             if let postVM = self.viewModel.otherViewModels["postViewModel"] as? PostViewModel {
                 postVM.delete()
                 self.backAction()
             }
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: .cancel, handler: { action in
         }))
         self.present(alert, animated: true, completion: nil)
     }

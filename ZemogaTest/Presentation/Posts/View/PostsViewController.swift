@@ -10,7 +10,7 @@ import Toast_Swift
 
 /// The `PostsViewController` class manages and defines all the behavior
 /// of all the view hierarchies that represent the list of `Posts`.
-class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
+class PostsViewController: UIViewController, UINavigationControllerDelegate {
     
     /// The custom `UIButton` that refresh the list.
     private let refeshButton = UIButton(type:.custom)
@@ -50,7 +50,7 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.refeshButton.setImage(UIImage(named: "Refresh"), for: .normal)
         self.refeshButton.addTarget(self, action: #selector(refreshAction), for: .touchUpInside)
         self.setupNavigation(
-            title: "Posts",
+            title: NSLocalizedString("POSTS_TITLE", comment: "Posts"),
             leftButton: nil,
             rightButton: self.refeshButton,
             secondRightButton: nil,
@@ -109,12 +109,12 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     /// `IBAction` to delete all `Posts`.
     @IBAction func deleteAll() {
-        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+        let alert = UIAlertController(title: NSLocalizedString("ALERT_TITLE", comment: "alert"), message: NSLocalizedString("ALERT_MESSAGE", comment: "alert message"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("DELETE", comment: "delete"), style: .destructive, handler: { action in
             self.viewModel.deleteAllPosts()
             self.table.reloadData()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: .cancel, handler: { action in
         }))
         self.present(alert, animated: true, completion: nil)
     }

@@ -33,8 +33,9 @@
 		BE96760A28220EB9006D435A /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96760928220EB9006D435A /* PostsViewController.swift */; };
 		BE96760C28220EF2006D435A /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96760B28220EF2006D435A /* PostDetailViewController.swift */; };
 		BE96760E28220FED006D435A /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96760D28220FED006D435A /* ViewController+Extensions.swift */; };
-		BE9676102822175A006D435A /* Posts+Table+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96760F2822175A006D435A /* Posts+Table+Extensions.swift */; };
-		BE96761228221DD3006D435A /* PostDetail+Table+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96761128221DD3006D435A /* PostDetail+Table+Extensions.swift */; };
+		BE96761528222394006D435A /* Posts+Table+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96761328222393006D435A /* Posts+Table+Extensions.swift */; };
+		BE96761628222394006D435A /* PostDetail+Table+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96761428222394006D435A /* PostDetail+Table+Extensions.swift */; };
+		BE96761C28222A80006D435A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE96761E28222A80006D435A /* Localizable.strings */; };
 		C9177116AE325A0998C82DF9 /* Pods_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,8 +92,12 @@
 		BE96760928220EB9006D435A /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		BE96760B28220EF2006D435A /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		BE96760D28220FED006D435A /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
-		BE96760F2822175A006D435A /* Posts+Table+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Posts+Table+Extensions.swift"; sourceTree = "<group>"; };
-		BE96761128221DD3006D435A /* PostDetail+Table+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostDetail+Table+Extensions.swift"; sourceTree = "<group>"; };
+		BE96761328222393006D435A /* Posts+Table+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Posts+Table+Extensions.swift"; sourceTree = "<group>"; };
+		BE96761428222394006D435A /* PostDetail+Table+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostDetail+Table+Extensions.swift"; sourceTree = "<group>"; };
+		BE967617282227EA006D435A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		BE96761928222844006D435A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		BE96761D28222A80006D435A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BE96761F28222A85006D435A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB2449707CB51E5F9258AB6D /* Pods_ZemogaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1005643AECDAC520A97BC2B /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -238,6 +243,7 @@
 				BE92F18B281C416300A784EC /* Main.storyboard */,
 				BE92F190281C416500A784EC /* LaunchScreen.storyboard */,
 				BE92F18E281C416500A784EC /* Assets.xcassets */,
+				BE96761E28222A80006D435A /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -310,9 +316,9 @@
 		BE92F1C2281C437F00A784EC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BE96761428222394006D435A /* PostDetail+Table+Extensions.swift */,
+				BE96761328222393006D435A /* Posts+Table+Extensions.swift */,
 				BE96760D28220FED006D435A /* ViewController+Extensions.swift */,
-				BE96760F2822175A006D435A /* Posts+Table+Extensions.swift */,
-				BE96761128221DD3006D435A /* PostDetail+Table+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = BE92F179281C416200A784EC;
 			productRefGroup = BE92F183281C416200A784EC /* Products */;
@@ -441,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE92F192281C416500A784EC /* LaunchScreen.storyboard in Resources */,
+				BE96761C28222A80006D435A /* Localizable.strings in Resources */,
 				BE92F18F281C416500A784EC /* Assets.xcassets in Resources */,
 				BE92F18D281C416300A784EC /* Main.storyboard in Resources */,
 			);
@@ -588,7 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE92F1CA281C93A500A784EC /* NetworkManager.swift in Sources */,
-				BE96761228221DD3006D435A /* PostDetail+Table+Extensions.swift in Sources */,
+				BE96761628222394006D435A /* PostDetail+Table+Extensions.swift in Sources */,
 				BE92F1C4281C760800A784EC /* Post.swift in Sources */,
 				BE96760C28220EF2006D435A /* PostDetailViewController.swift in Sources */,
 				BE92F186281C416200A784EC /* AppDelegate.swift in Sources */,
@@ -604,7 +612,7 @@
 				BE92F1CC281C93C700A784EC /* API.swift in Sources */,
 				BE96760A28220EB9006D435A /* PostsViewController.swift in Sources */,
 				BE92F1D6281CFB3300A784EC /* PostCell.swift in Sources */,
-				BE9676102822175A006D435A /* Posts+Table+Extensions.swift in Sources */,
+				BE96761528222394006D435A /* Posts+Table+Extensions.swift in Sources */,
 				BE967600282202BF006D435A /* CommentCell.swift in Sources */,
 				BE967606282205F2006D435A /* PostDetailViewModel.swift in Sources */,
 			);
@@ -647,6 +655,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				BE92F18C281C416300A784EC /* Base */,
+				BE967617282227EA006D435A /* es */,
+				BE96761928222844006D435A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -659,6 +669,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		BE96761E28222A80006D435A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE96761D28222A80006D435A /* en */,
+				BE96761F28222A85006D435A /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -666,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -726,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

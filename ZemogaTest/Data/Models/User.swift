@@ -20,7 +20,7 @@ class User: Object, Codable {
             /// phone:     The `phone`  provided by `User`.
     @objc dynamic var phone: String = ""
             /// website:     The `website` provided by `User`.
-    @objc dynamic var website: String? = ""
+    @objc dynamic var website: String = ""
     
     override static func primaryKey() -> String {
         return "id"

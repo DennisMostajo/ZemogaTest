@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  ZemogaTest
+
+  Created by Dennis.Mostajo on 5/3/22.
+  
+*/
+
+"POSTS_TITLE" = "Posts";
+"DETAIL_TITLE" = "Detail";
+"ALERT_TITLE" = "Alert";
+"ALERT_MESSAGE" = "Are you sure to continue the delete?";
+"COMMENTS_TITLE" = "Comments";
+"CANCEL" = "Cancel";
+"DELETE" = "Delete";

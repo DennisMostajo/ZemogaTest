@@ -5,15 +5,17 @@
 //  Created by Dennis.Mostajo on 5/3/22.
 //
 
+import UIKit
+
 /// Custom `Extension` from `PostDetailViewController` to manage the `UITableView` behavior.
-extension PostDetailViewController {
+extension PostDetailViewController: UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - UITableView
     
     /// `Data Source` method from `UITableView`.
     /// - Returns:The title of section.
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Comments"
+        return NSLocalizedString("COMMENTS_TITLE", comment: "Comments")
     }
     
     /// `Delegate` method from `UITableView`.

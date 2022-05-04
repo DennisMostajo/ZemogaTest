@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  ZemogaTest
+
+  Created by Dennis.Mostajo on 5/3/22.
+  
+*/
+
+"POSTS_TITLE" = "Publicaciones";
+"DETAIL_TITLE" = "Detalle";
+"ALERT_TITLE" = "Alerta";
+"ALERT_MESSAGE" = "¿Estás seguro de continuar la eliminación?";
+"COMMENTS_TITLE" = "Comentarios";
+"CANCEL" = "Cancelar";
+"DELETE" = "Eliminar";
